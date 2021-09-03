@@ -39,7 +39,7 @@ body {
 }
 
 header {
-	margin-top: 64px;
+	margin-top: 68px;
 	margin-bottom: 55px;
 	height: 145px;
 	background-image: url(Images/pattern-circles.svg);
@@ -70,6 +70,8 @@ p {
 }
 
 header p {
+	margin-top: 12px;
+	margin-bottom: 2px;
 	font-size: 0.8rem;
 	line-height: 1.38em;
 	letter-spacing: -0.027em;
@@ -148,6 +150,28 @@ main {
 	);
 }
 
+.PriceChoose::-moz-range-track {
+	width: 100%;
+	height: 8px;
+	border-radius: 4px;
+	background: linear-gradient(
+		90deg,
+		var(--SoftCyan) var(--sliderTrackProgress),
+		#eaeefb 0%
+	);
+}
+
+.PriceChoose::-ms-track{
+	width: 100%;
+	height: 8px;
+	border-radius: 4px;
+	background: linear-gradient(
+		90deg,
+		var(--SoftCyan) var(--sliderTrackProgress),
+		#eaeefb 0%
+	);
+}
+
 .PriceChoose::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	width: 40px;
@@ -163,7 +187,45 @@ main {
 	border-radius: 50%;
 }
 
+.PriceChoose::-moz-range-thumb {
+	width: 40px;
+	height: 40px;
+	margin-top: -16px;
+	background-size: 100%;
+	background: var(--StrongCyan);
+	background-image: url(Images/icon-slider.svg);
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+	box-shadow: 0px 15px 25px 3px rgba(131, 255, 253, 0.5);
+	border-radius: 50%;
+}
+
+.PriceChoose::-ms-thumb {
+	width: 40px;
+	height: 40px;
+	margin-top: -16px;
+	background-size: 100%;
+	background: var(--StrongCyan);
+	background-image: url(Images/icon-slider.svg);
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+	box-shadow: 0px 15px 25px 3px rgba(131, 255, 253, 0.5);
+	border-radius: 50%;
+}
+
 .PriceChoose:active::-webkit-slider-thumb {
+	cursor: grab;
+	background-color: #78ebdc;
+}
+
+.PriceChoose:active::-moz-range-thumb {
+	cursor: grab;
+	background-color: #78ebdc;
+}
+
+.PriceChoose:active::-ms-thumb {
 	cursor: grab;
 	background-color: #78ebdc;
 }
@@ -236,14 +298,23 @@ main {
 	color: var(--LightOrange);
 }
 
+.gaincolumn {
+	margin-top: 40px;
+	border-top: 2px solid #eef1fa;
+}
+
 .gain {
-	margin: 77px 132px 0 47px;
+	margin: 32px 132px 0 47px;
 }
 
 .gain p {
 	font-size: 0.625rem;
 	line-height: 1.36em;
 	letter-spacing: -0.02em;
+}
+
+.gain *:not(:last-child) {
+	margin-bottom: 10px;
 }
 
 .gain p::before {
@@ -253,7 +324,7 @@ main {
 
 button {
 	margin-left: -1px;
-	margin-top: 88px;
+	margin-top: 47px;
 	margin-bottom: 3px;
 	width: 170px;
 	height: 41px;
@@ -330,6 +401,7 @@ footer {
 	}
 
 	header p {
+		margin-top: 0;
 		margin-bottom: 32px;
 		width: 176px;
 		font-size: 0.65rem;
@@ -398,7 +470,6 @@ footer {
 	}
 
 	.gaincolumn {
-		border-top: 2px solid #eef1fa;
 		width: 100%;
 		flex-direction: column;
 		align-items: center;
@@ -409,10 +480,6 @@ footer {
 		text-align: center;
 		padding-top: 22px;
 		margin-bottom: 32px;
-	}
-
-	.gain *:not(:last-child) {
-		margin-bottom: 10px;
 	}
 
 	.gaincolumn button {
