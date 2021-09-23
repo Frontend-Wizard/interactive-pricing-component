@@ -1,6 +1,6 @@
 # Frontend Mentor - Interactive pricing component solution
 
-This is a solution to the Stats preview card challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the Interactive pricing component challenge on Frontend Mentor. Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Overview 
 
